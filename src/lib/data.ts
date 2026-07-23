@@ -1,0 +1,218 @@
+import type { Project, Skill, ExperienceItem, ServiceItem } from './types';
+
+const BASE = import.meta.env.BASE_URL;
+
+export const PROFILE = {
+  name: 'Simpy Adwany',
+  title: 'Technical Director',
+  tagline: 'Architecting network management and video surveillance systems with 21+ years of hands-on technical leadership.',
+  email: 'simpy.adwany@gmail.com',
+  phone: '',
+  location: 'Bengaluru, India',
+  github: 'https://github.com/',
+  linkedin: 'https://www.linkedin.com/',
+  twitter: 'https://twitter.com/',
+  avatar: `${BASE}images/simpy-photo.jpg`,
+  resume: `${BASE}Resume_Simpy.docx`,
+  education: 'B.Tech (IT), MNIT Jaipur',
+  bio: 'I am a Technical Director with 21+ years of experience in software development, technical leadership, network management systems, and video surveillance technologies. Currently functioning as a hands-on Technical Lead, I own architecture, design, development, customer communication, team mentoring, release ownership, and project delivery. My expertise spans C, C++, Qt/QML, Python, Linux, SNMP, MQTT, ONVIF, and TCP/IP networking, with a proven track record of leading small engineering teams and delivering customer-facing solutions.',
+  stats: [
+    { label: 'Years Experience', value: '21+' },
+    { label: 'Projects Delivered', value: '11+' },
+    { label: 'Years at Spanidea', value: '8+' },
+    { label: 'Team Size Led', value: '4+' },
+  ],
+};
+
+export const SERVICES: ServiceItem[] = [
+  {
+    title: 'Network Management Systems',
+    description: 'Designing SNMP-based monitoring solutions, KPI collection frameworks, and MQTT telemetry pipelines for telecom and enterprise network devices.',
+    icon: 'Network',
+  },
+  {
+    title: 'Video Surveillance & ONVIF',
+    description: 'Building ONVIF-compliant firmware for network cameras, ensuring interoperability with third-party clients and devices across the surveillance ecosystem.',
+    icon: 'Camera',
+  },
+  {
+    title: 'Enterprise Software Development',
+    description: 'Developing cross-platform desktop applications in C++, Qt/QML, and Python for LiDAR sensors, 3D visualization, and medical document systems.',
+    icon: 'Code',
+  },
+  {
+    title: 'Technical Leadership',
+    description: 'Owning architecture, design, code reviews, team mentoring, customer communication, release management, and end-to-end project delivery.',
+    icon: 'Users',
+  },
+];
+
+export const SKILLS: Skill[] = [
+  {
+    category: 'Core Technology',
+    items: ['C', 'C++', 'C++11/14/17', 'Python', 'Qt/QML', 'C#', 'STL', 'Boost'],
+  },
+  {
+    category: 'Cloud & Platforms',
+    items: ['Linux', 'Windows', 'Docker'],
+  },
+  {
+    category: 'Networking & Protocols',
+    items: ['SNMP', 'MQTT', 'ONVIF', 'TCP/IP', 'SOAP', 'WSDL', 'gSOAP', 'REST APIs'],
+  },
+  {
+    category: 'Tools & Methodologies',
+    items: ['Git', 'SVN', 'Jenkins', 'CMake', 'Visual Studio', 'Eclipse', 'GDB', 'WinDbg', 'Wireshark', 'Valgrind', 'SoapUI', 'CUnit', 'CppUnit', 'Parasoft', 'Design Patterns', 'Postman'],
+  },
+];
+
+export const EXPERIENCE: ExperienceItem[] = [
+  {
+    role: 'Technical Director — Automotive & Application Software',
+    company: 'Spanidea',
+    period: 'Feb 2018 — Present',
+    description: 'Leading technical development as a hands-on Technical Lead across network management, 3D LiDAR sensor management, and autonomous vehicle visualization projects.',
+    highlights: [
+      'Architected SAR-HM SNMP collector for Nokia devices with MQTT telemetry pipeline',
+      'Led development of Qortex — enterprise 3D LiDAR sensor management platform',
+      'Built OpenWISP test automation framework for managed network devices',
+      'Owned architecture, customer communication, releases, and team mentoring',
+    ],
+  },
+  {
+    role: 'Technical Lead',
+    company: 'Canon India Pvt Ltd',
+    period: 'Jul 2005 — Jan 2018',
+    description: 'Led development of ONVIF firmware, medical document libraries, XSL-FO processors, and interactive whiteboard applications over 12+ years.',
+    highlights: [
+      'Developed ONVIF-compliant firmware for network video surveillance cameras',
+      'Built reusable C++ library for HL7 CDA compliant medical document generation',
+      'Developed XSL-FO processor transforming HL7 documents to ODF format',
+      'Led whiteboard application and virtual printer driver development',
+    ],
+  },
+];
+
+export const PROJECTS: Project[] = [
+  {
+    id: 'sar-hm-snmp-collector',
+    title: 'SAR-HM SNMP Collector',
+    category: 'Network Management',
+    description: 'Monitoring solution for Nokia SAR-HM devices that collects SNMP data, processes KPIs, and publishes telemetry to an MQTT broker for storage in InfluxDB.',
+    longDescription: 'A monitoring solution built for Nokia SAR-HM devices that collects SNMP data, processes KPIs, and publishes telemetry to an MQTT broker for storage in InfluxDB. As Technical Lead for a team of 4 engineers, I designed the overall architecture and KPI collection framework, developed the SNMP polling, KPI processing, and MQTT publishing modules, and defined the KPI mapping and MQTT payload structure. I worked directly with customers to gather requirements, troubleshoot issues, and provide technical solutions, while performing code reviews, mentoring team members, managing releases, and ensuring successful project delivery.',
+    technologies: ['Python', 'SNMP', 'MQTT', 'InfluxDB', 'Linux', 'Git'],
+    coverImage: 'https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: true,
+    year: '2026',
+  },
+  {
+    id: 'openwisp-test-automation',
+    title: 'OpenWISP Test Automation Framework',
+    category: 'Test Automation',
+    description: 'Centralized test management and automation platform for OpenWISP managed network devices with automated test execution, device management, scheduling, and reporting.',
+    longDescription: 'A centralized test management and automation platform developed for OpenWISP managed network devices, supporting automated test execution, device management, scheduling, monitoring, and reporting. I developed the automated test execution framework for network devices, implemented MQTT-based communication between the server and devices, built REST APIs for test management functions, and was involved in code reviews and code optimization throughout the project lifecycle.',
+    technologies: ['Python', 'Django', 'OpenWISP', 'MQTT', 'Docker', 'PostgreSQL', 'Redis', 'Git'],
+    coverImage: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: true,
+    year: '2025',
+  },
+  {
+    id: 'qortex-client-server',
+    title: 'Qortex Client & Server',
+    category: 'Enterprise Software',
+    description: 'Enterprise application for managing 3D LiDAR sensors, visualizing point cloud data, defining monitoring zones, and configuring rules for object detection and event recording.',
+    longDescription: 'An enterprise application for managing 3D LiDAR sensors, visualizing point cloud data, defining monitoring zones, and configuring rules for object detection and event recording. I led the development of multiple software modules, participated in architecture and design discussions, and implemented complex features, debugging, and performance improvements. I conducted code reviews, mentored team members, managed customer communication, release activities, and technical issue resolution throughout the project.',
+    technologies: ['C++', 'C++11/14/17', 'Qt/QML', 'Boost', 'CMake', 'Jenkins', 'Linux', 'Windows'],
+    coverImage: 'https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: true,
+    year: '2018',
+  },
+  {
+    id: 'qguard-qview',
+    title: 'QGuard / QView',
+    category: 'Enterprise Software',
+    description: '3D visualization platform for autonomous vehicle sensors used for monitoring surrounding objects and environmental awareness.',
+    longDescription: 'A 3D visualization platform for autonomous vehicle sensors, used for monitoring surrounding objects and environmental awareness. I developed application modules and enhancements, performed debugging and code reviews, supported customer issue resolution and technical discussions, and mentored junior engineers on the team.',
+    technologies: ['C++', 'Qt', 'Boost', 'CMake', 'Jenkins', 'Linux'],
+    coverImage: 'https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: false,
+    year: '2018',
+  },
+  {
+    id: 'ichigo-onvif-stack',
+    title: 'Ichigo — ONVIF Stack Development',
+    category: 'Video Surveillance',
+    description: 'ONVIF compliant firmware for network video surveillance cameras to ensure interoperability with third-party ONVIF clients and devices.',
+    longDescription: 'Developed ONVIF compliant firmware for network video surveillance cameras to ensure interoperability with third-party ONVIF clients and devices. I developed ONVIF services and protocols, built automation tools and test frameworks, generated code coverage and memory leak reports, and performed customer support, release management, code reviews, and team mentoring throughout the project.',
+    technologies: ['C', 'Python', 'gSOAP', 'SOAP', 'WSDL', 'Linux', 'Jenkins', 'Wireshark', 'Valgrind', 'SoapUI'],
+    coverImage: 'https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: true,
+    year: '2014',
+  },
+  {
+    id: 'medical-document-library',
+    title: 'Medical Document Library',
+    category: 'Healthcare Software',
+    description: 'Reusable C++ library for generating HL7 CDA compliant XML medical documents used by healthcare applications.',
+    longDescription: 'Developed a reusable C++ library for generating HL7 CDA compliant XML medical documents used by healthcare applications. I developed the Procedure Note, Operative Note, and Diagnostic Imaging modules, designed reusable APIs for document generation, and performed testing and customer issue resolution to ensure compliance and reliability.',
+    technologies: ['C++', 'C#', 'HL7 CDA', 'XML', 'Visual Studio'],
+    coverImage: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: false,
+    year: '2013',
+  },
+  {
+    id: 'xsl-fo-processor',
+    title: 'XSL-FO Processor',
+    category: 'Enterprise Software',
+    description: 'XML processing framework that transformed HL7 medical documents into XSL-FO and ODF formats for viewing, printing, and storage.',
+    longDescription: 'An XML processing framework that transformed HL7 medical documents into XSL-FO and ODF formats for viewing, printing, and storage. I developed the document processing engine, implemented XML parsing and ODF generation, and worked on text, image, and table rendering modules to produce accurate, format-compliant output.',
+    technologies: ['C++', 'XML', 'XSL-FO', 'DOM', 'SAX', 'ODF'],
+    coverImage: 'https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: false,
+    year: '2009',
+  },
+  {
+    id: 'whiteboard-linux-porting',
+    title: 'Whiteboard Linux Porting',
+    category: 'Enterprise Software',
+    description: 'Ported an interactive whiteboard application from Windows to Linux, resolving platform compatibility issues.',
+    longDescription: 'Ported an interactive whiteboard application from Windows to Linux. I ported application modules to Linux, resolved platform compatibility issues, and performed testing and optimization to ensure a smooth cross-platform experience.',
+    technologies: ['C++', 'Qt', 'X11', 'Linux'],
+    coverImage: 'https://images.pexels.com/photos/5212343/pexels-photo-5212343.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: false,
+    year: '2009',
+  },
+  {
+    id: 'whiteboard-application',
+    title: 'Whiteboard Application',
+    category: 'Enterprise Software',
+    description: 'Interactive whiteboard application supporting multimedia content including images, videos, Flash, and audio.',
+    longDescription: 'An interactive whiteboard application supporting multimedia content including images, videos, Flash, and audio. I developed the multimedia components, implemented video, Flash, and applet support, and performed testing and bug fixing to deliver a stable, feature-rich application.',
+    technologies: ['C++', 'Qt', 'Windows'],
+    coverImage: 'https://images.pexels.com/photos/5212343/pexels-photo-5212343.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: false,
+    year: '2008',
+  },
+  {
+    id: 'virtual-printer-driver',
+    title: 'Virtual Printer Driver Development',
+    category: 'Systems Software',
+    description: 'Windows and Linux virtual printer drivers to convert printable content into images for whiteboard integration.',
+    longDescription: 'Developed Windows and Linux virtual printer drivers to convert printable content into images for whiteboard integration. I developed printer drivers for both Windows and Linux platforms, implemented the image conversion pipeline, and integrated the drivers with the Whiteboard application to enable seamless content capture.',
+    technologies: ['C', 'WinDDK', 'WinDbg', 'GDI', 'CUPS'],
+    coverImage: 'https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: false,
+    year: '2007',
+  },
+  {
+    id: 'group-collaboration-system',
+    title: 'Group Collaboration System (GCS)',
+    category: 'Enterprise Software',
+    description: 'Enterprise collaboration application similar to Microsoft NetMeeting, providing screen sharing, remote control, file sharing, and collaborative working.',
+    longDescription: 'An enterprise collaboration application similar to Microsoft NetMeeting, providing screen sharing, remote control, file sharing, and collaborative working capabilities. I developed the Mirror Driver and Extended Display Driver, implemented screen sharing and remote control functionality, and developed drag-and-drop support between local and remote systems.',
+    technologies: ['C', 'C++', 'WinDDK', 'WinDbg', 'GDI', 'Windows', 'Visual Studio'],
+    coverImage: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    featured: false,
+    year: '2005',
+  },
+];
